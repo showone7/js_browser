@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Oracle</title>
+  <style>
+    .pic {
+      padding-top: 15px;
+      width: 400px;
+
+    }
+  </style>
+  <script>
+    function answer() {
+      var yourInput = document.getElementById('question');
+      var yourValue = yourInput.value;
+      document.getElementById('yourQuestion').innerHTML = yourValue
+      var ar = ['Совершенно точно', 'Определенно', 'Несомненно', 'Да', 'Можно на это смело рассчитывать', 'Как мне кажется, да', 'Скорее всего', 'Прогноз положительный', 'По всем признакам - да', 'Ответ как-то мутно выглядит, попробуй еще', 'Попробуй позже', 'Тебе сейчас лучше об этом не знать', 'Невозможно сейчас сказать что-то определенное', 'Сосредоточься и спроси меня опять', 'Я бы не стала на это рассчитывать', 'Мой ответ - нет', 'Мои источники все отрицают', 'Прогноз выглядит неутешительно', 'Сомнительно', 'Не мучай меня своими скучными вопросами, пожалуйста']
+      var rand_number = Math.random() * ar.length;
+      var round = Math.round(rand_number);
+      document.getElementById('yourAnswer').innerHTML = ar[round]
+    }
+  </script>
+
+</head>
+
+<body>
+  <h1>Welcome to Oracle</h1>
+  <a href="index.html">onchange</a>
+  <a href="onclick.html">onclick</a>
+  <a href="onmouseover.html">onmouseover</a>
+  <h2>Ask your question</h2>
+  <input id="question">
+  <div>
+    <img src="img/img1.jpg" class="pic" onmouseover="answer()">
+  </div>
+  <p id="yourQuestion"></p>
+  <p id="yourAnswer"></p>
+</body>
+
+</html>
